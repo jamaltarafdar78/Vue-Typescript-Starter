@@ -6,6 +6,28 @@
 </template>
 
 <script lang="ts">
+import Vue from 'vue';
+import Component from 'vue-class-component';
+
+@Component({})
+export default class Hello extends Vue {
+  message: string = 'Hello Vue'
+
+  get fullMessage () {
+    return `${this.message} from Typescript`
+  }
+
+  created(){
+    console.log('created!')
+  }
+
+  clicked(){
+      console.log('clicked');
+  }
+
+}
+
+/*
 export default {
   name: 'hello',
   data () {
@@ -29,7 +51,7 @@ export default {
       console.log('clicked');
     }
   }
-}
+}*/
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
